@@ -35,7 +35,7 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 				appliance = (Appliance)decoder.readObject();
 			}
 		}
-		catch (FileNotFoundException | IllegalAccessException e) {
+		catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		return foundAppliances;

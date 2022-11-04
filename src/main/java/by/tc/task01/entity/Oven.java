@@ -8,6 +8,8 @@ public class Oven extends Appliance{
     private double height;
     private double width;
 
+    public Oven() {}
+
     public Oven(String name, double price, int powerConsumption, double weight, int capacity, int depth, double height, double width) {
         super(name, price);
         this.powerConsumption = powerConsumption;

@@ -8,6 +8,8 @@ public class VacuumCleaner extends Appliance{
     private double motorSpeedRegulation;
     private double cleaningWidth;
 
+    public VacuumCleaner() {}
+
     public VacuumCleaner(String name, double price, double powerConsumption, String filterType, String bagType, String wandType, double motorSpeedRegulation, double cleaningWidth) {
         super(name, price);
         this.powerConsumption = powerConsumption;

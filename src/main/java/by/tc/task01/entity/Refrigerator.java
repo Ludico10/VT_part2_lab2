@@ -8,6 +8,8 @@ public class Refrigerator extends Appliance{
     private double height;
     private double width;
 
+    public Refrigerator() {}
+
     public Refrigerator(String name, double price, int powerConsumption, double weight, double freezerCapacity, double overallCapacity, double height, double width) {
         super(name, price);
         this.powerConsumption = powerConsumption;

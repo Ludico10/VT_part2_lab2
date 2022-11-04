@@ -7,6 +7,8 @@ public class TabletPC extends Appliance{
     private double flashMemoryCapacity;
     private String color;
 
+    public TabletPC() {}
+
     public TabletPC(String name, double price, double batteryCapacity, int displayInches, double memoryRom, double flashMemoryCapacity, String color) {
         super(name, price);
         this.batteryCapacity = batteryCapacity;
@@ -65,7 +67,7 @@ public class TabletPC extends Appliance{
                 ", displayInches=" + displayInches +
                 ", memoryRom=" + memoryRom +
                 ", flashMemoryCapacity=" + flashMemoryCapacity +
-                ", color=" + color + '\'' +
+                ", color='" + color + '\'' +
                 '}';
     }
 }

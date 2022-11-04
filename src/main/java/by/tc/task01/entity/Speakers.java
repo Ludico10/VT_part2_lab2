@@ -7,6 +7,8 @@ public class Speakers extends Appliance{
     private double frequencyRangeMax;
     private int cordLength;
 
+    public Speakers() {}
+
     public Speakers(String name, double price, int powerConsumption, int numberOfSpeakers, double frequencyRangeMin, double frequencyRangeMax, int cordLength) {
         super(name, price);
         this.powerConsumption = powerConsumption;

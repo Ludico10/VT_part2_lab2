@@ -2,16 +2,14 @@ package by.tc.task01.entity;
 
 public class Teapot extends Appliance{
     private int powerConsumption;
-    private double frequencyRangeMin;
-    private double frequencyRangeMax;
     private double volume;
     private String color;
 
-    public Teapot(String name, double price, int powerConsumption, double frequencyMin, double frequencyMax, double volume, String color) {
+    public Teapot() {}
+
+    public Teapot(String name, double price, int powerConsumption, double volume, String color) {
         super(name, price);
         this.powerConsumption = powerConsumption;
-        this.frequencyRangeMin = frequencyMin;
-        this.frequencyRangeMax = frequencyMax;
         this.volume = volume;
         this.color = color;
     }
@@ -22,22 +20,6 @@ public class Teapot extends Appliance{
 
     public void setPowerConsumption(int powerConsumption) {
         this.powerConsumption = powerConsumption;
-    }
-
-    public double getFrequencyRangeMin() {
-        return frequencyRangeMin;
-    }
-
-    public void setFrequencyRangeMin(double frequencyRangeMin) {
-        this.frequencyRangeMin = frequencyRangeMin;
-    }
-
-    public double getFrequencyRangeMax() {
-        return frequencyRangeMax;
-    }
-
-    public void setFrequencyRangeMax(double frequencyRangeMax) {
-        this.frequencyRangeMax = frequencyRangeMax;
     }
 
     public double getVolume() {
@@ -62,8 +44,8 @@ public class Teapot extends Appliance{
                 "price=" + price +
                 ", name='" + name + '\'' +
                 ", powerConsumption=" + powerConsumption +
-                ", waterCapacity=" + volume +
-                ", color=" + color + '\'' +
+                ", volume=" + volume +
+                ", color='" + color + '\'' +
                 '}';
     }
 }

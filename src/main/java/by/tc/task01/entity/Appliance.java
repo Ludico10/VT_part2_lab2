@@ -7,8 +7,7 @@ public class Appliance {
     protected double price;
     protected String name;
 
-    public Appliance() {
-    }
+    public Appliance() {}
 
     public Appliance(String name, double price) {
         this.price = price;

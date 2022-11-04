@@ -7,6 +7,9 @@ public class Laptop extends Appliance{
 	private int systemMemory;
 	private double cpu;
 	private int displayInches;
+
+	public Laptop() {}
+
 	public Laptop(String name, double price, double batteryCapacity, String os, int memoryRom, int systemMemory, double cpu, int displayInches) {
 		super(name, price);
 		this.batteryCapacity = batteryCapacity;
@@ -71,7 +74,7 @@ public class Laptop extends Appliance{
 				"price=" + price +
 				", name='" + name + '\'' +
 				", batteryCapacity=" + batteryCapacity +
-				", os=" + os + '\'' +
+				", os='" + os + '\'' +
 				", memoryRom=" + memoryRom +
 				", systemMemory=" + systemMemory +
 				", cpu=" + cpu +

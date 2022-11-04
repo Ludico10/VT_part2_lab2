@@ -27,9 +27,10 @@ public final class SearchCriteria {
 	}
 
 	public enum Teapots{
-		POWER_CONSUMPTION, FREQUENCY_RANGE, VOLUME, COLOR
+		POWER_CONSUMPTION, VOLUME, COLOR
 	}
 	
-	private SearchCriteria() {}
+	private SearchCriteria() {
+	}
 }
 
