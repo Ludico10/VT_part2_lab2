@@ -7,8 +7,15 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Validator
+ */
 public class Validator {
 
+	/**
+	 * @param criteria - criteria to check
+	 * @return valid or invalid
+	 */
 	public static boolean validCriteria(Criteria criteria) {
 		return switch (criteria.getGroupSearchName()) {
 			case "Teapots" -> doesCriteriaExists(criteria, SearchCriteria.Teapots.class);
@@ -22,6 +29,11 @@ public class Validator {
 		};
 	}
 
+	/**
+	 * @param criteria - criteria to check
+	 * @param e - enum
+	 * @return exist criteria or not
+	 */
 	private static boolean doesCriteriaExists(Criteria criteria, Class<? extends Enum<?>> e) {
 		Set<String> properties = criteria.getCriteria().keySet();
 		String[] arr = Arrays.stream(e.getEnumConstants()).map(Enum::toString).toArray(String[]::new);

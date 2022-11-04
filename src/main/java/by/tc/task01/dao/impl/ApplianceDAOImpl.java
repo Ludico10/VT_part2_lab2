@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * ApplianceDAO implementation
+ */
 public class ApplianceDAOImpl implements ApplianceDAO{
 
 	private static final String path = "src/main/resources/appliances_db.xml";
@@ -23,7 +26,7 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 			Appliance appliance = (Appliance)decoder.readObject();
 			while (appliance != null) {
 				try {
-					if (fitsCriteria(appliance, criteria)) {
+					if (respond(appliance, criteria)) {
 						foundAppliances.add(appliance);
 					}
 				} catch (NoSuchFieldException e) {
@@ -66,7 +69,7 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 		return appliances;
 	}
 
-	private boolean fitsCriteria(Appliance appliance, Criteria criteria) throws IllegalAccessException, NoSuchFieldException {
+	private boolean respond(Appliance appliance, Criteria criteria) throws IllegalAccessException, NoSuchFieldException {
 		if (!appliance.getClass().getSimpleName().equals(criteria.getGroupSearchName())) {
 			return false;
 		}
