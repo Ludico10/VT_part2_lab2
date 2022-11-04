@@ -13,6 +13,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		List<Appliance> appliances;
+
 		ServiceFactory factory = ServiceFactory.getInstance();
 		ApplianceService service = factory.getApplianceService();
 
@@ -21,7 +22,7 @@ public class Main {
 		Criteria teapotCriteria = new Criteria(SearchCriteria.Teapots.class.getSimpleName());
 		appliances = service.find(teapotCriteria);
 		if (appliances != null) {
-			System.out.println("All teapots: ");
+			System.out.println("All kettles: ");
 			PrintApplianceInfo.print(appliances);
 		}
 
