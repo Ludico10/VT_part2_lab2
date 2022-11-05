@@ -35,6 +35,7 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 				appliance = (Appliance)decoder.readObject();
 			}
 		}
+		catch (ArrayIndexOutOfBoundsException ignored) {}
 		catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -63,6 +64,7 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 				result = (Appliance)decoder.readObject();
 			}
 		}
+		catch (ArrayIndexOutOfBoundsException ignored) {}
 		catch(FileNotFoundException e){
 			System.out.println(e.getMessage());
 		}
